@@ -9,15 +9,55 @@
     <h2> Amazing images</h2>
     <div>
         <ul id="images">
-            <li><img width="200px" id="photoshop" src="https://www.pexels.com/video/stunning-coastal-cliff-and-crystal-blue-water-scene-38104915/"
-            alt="photoshop>"</li>
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/37805970/pexels-photo-37805970.jpeg"
+            alt="photoshop"></li>
+            <li><img width="200px" id="pexels" src="https://images.pexels.com/photos/35141692/pexels-photo-35141692.jpeg"
+            alt="" ></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
         </ul>
     </div>
     
 </body>
 <script>
-    document.getElementById('owl').onclick=function(){
-        alert("owl clicker")
-    }
+    // document.getElementById('pexels').onclick=function(){
+    //     alert("pexels clicked")
+    // }
+
+    // attachEvent()
+    //jQuery-on
+
+     // types, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clienX, clientY, screenY
+    // altkey, ctrlkey,shiftkey,keycode
+    
+    // document.getElementById('images').addEventListener('click', function(e){
+    //    console.log("clicked inside the ul");
+    // },false)
+
+    // document.getElementById('pexels').addEventListener('click', function(e){
+    //    console.log("clicked pexels");
+    //    e.stopPropagation()
+    // },false)
+
+    // document.getElementById('google').addEventListener
+    // ('click',function(e){
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // },false)
+
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName==='IMG'){
+            console.log(e.target.id);
+            
+        let removeIt=e.target.parentNode
+         removeIt.remove()
+        }
+    })
+    // removeIt.parentNode.removeChild(removeIt)
+   
 </script>
 </html>
